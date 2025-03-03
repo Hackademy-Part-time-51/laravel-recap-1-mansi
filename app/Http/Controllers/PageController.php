@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -58,5 +60,28 @@ class PageController extends Controller
         abort(404);
         //return view('show', ['article' => $element]]);
 
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function send(Request $request)
+    {
+        $request->validate([
+            'name' => ['required'],
+            'email' => ['required', 'email'],
+            'message' => ['required'],
+        ]);
+
+        $data = [
+            'name' => $request->input('name'),
+            'email' => $request->email,
+            'message' => $request->message,
+        ];
+
+        //Mail::to($request->email)->send(new OrderShipped($order));
+        Mail::to($data['email'])->send(new SendMail($data));
     }
 }

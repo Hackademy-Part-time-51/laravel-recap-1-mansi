@@ -13,7 +13,7 @@
     <x-navbar />
     {{ $slot }}
 
-    -----
+
 
     {{ $custom_bottom ?? '' }}
 </body>

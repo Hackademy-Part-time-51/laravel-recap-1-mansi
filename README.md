@@ -65,3 +65,44 @@ public static $articles = [
     ]
 ];
 ```
+
+
+ 
+
+$products = [
+    [
+        'slug' => 'smartphone-galaxy-s23',
+        'title' => 'Samsung Galaxy S23',
+        'price' => 899.99,
+        'description' => 'Smartphone di ultima generazione con fotocamera da 108MP e processore Snapdragon 8 Gen 2.'
+    ],
+    [
+        'slug' => 'laptop-macbook-pro',
+        'title' => 'MacBook Pro 14"',
+        'price' => 1999.00,
+        'description' => 'Laptop professionale con chip M2 Pro, 16GB RAM e 512GB SSD.'
+    ],
+    [
+        'slug' => 'cuffie-wireless-xm5',
+        'title' => 'Sony WH-1000XM5',
+        'price' => 349.99,
+        'description' => 'Cuffie wireless con cancellazione del rumore attiva e autonomia di 30 ore.'
+    ],
+    [
+        'slug' => 'smartwatch-apple-watch',
+        'title' => 'Apple Watch Series 8',
+        'price' => 429.00,
+        'description' => 'Smartwatch con monitoraggio avanzato della salute, GPS e resistenza all\'acqua.'
+    ],
+    [
+        'slug' => 'tablet-ipad-air',
+        'title' => 'iPad Air',
+        'price' => 649.00,
+        'description' => 'Tablet con display Liquid Retina da 10.9", chip M1 e compatibilità con Apple Pencil.'
+    ]
+];
+
+// Esempio di come accedere ai dati
+// echo "Prodotto: " . $prodotti[0]['title'] . " - Prezzo: €" . $prodotti[0]['price'];
+
+ 

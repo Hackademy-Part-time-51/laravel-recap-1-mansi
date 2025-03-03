@@ -17,6 +17,12 @@ Route::get('/chi-sono-cesco', [PageController::class, 'about'])
 Route::get('/dettagli/{article}', [PageController::class, 'show'])
     ->name('show');
 
+Route::get('/contattami', [PageController::class, 'contact'])
+    ->name('contact');
+
+Route::post('/invia-contatto', [PageController::class, 'send'])
+    ->name('send');
+
 
 //Wildcard = rotta jolly
 // Route::get('/{service}', function () {
